@@ -9,33 +9,41 @@ public class Cat
 {
     public String name;
     public int age;
-    public int w;
-    public int sila;
+    public int weight;
+    public int strength;
 
-    public Cat()
-    {
-    }
+    
     
     public static void main(String[] args)
     {
         Cat osi = new Cat();
         osi.age = 7;
-        osi.sila = 19;
-        osi.w = 20;
+        osi.strength = 19;
+        osi.weight = 20;
         osi.name = "Osi";
 
         Cat rubi = new Cat();
         rubi.name = "Rubi";
-        rubi.w = 17;
-        rubi.sila = 18;
+        rubi.weight = 17;
+        rubi.strength = 18;
         rubi.age = 5;
 
         rubi.fight(osi);
     }
+    public Cat()
+    {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.strength = strength;
+    }
 
     public boolean fight(Cat anotherCat)
     {
-        if ((this.w + this.sila) > (anotherCat.w + anotherCat.sila)) return true;
+        if (this.strength > anotherCat.strength){
+             return true;
+        }
         else return false;
     }
 }
+
