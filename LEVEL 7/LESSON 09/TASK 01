@@ -1,0 +1,49 @@
+package com.javarush.test.level07.lesson09.task01;
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+/* Three arrays
+1. Read from the keyboard 20 numbers, save them in a list, then sort them into three other lists:
+    List 1 stores numbers divisible by 3 (x%3==0)
+    List 2 stores numbers divisible by 2 (x%2==0)
+    List 3 stores the rest of numbers.
+    The numbers divisible by 3 and 2 at the same time (for example 6) belong to both lists – list 1 and list 2.
+    2. The method printList() should display each element of the list on a new line.
+    3. Use the method printList() to display to the screen these three lists. First the list 1 should be displayed, then list 2, after that list 3.
+*/
+
+public class Solution
+{
+    public static void main(String[] args) throws Exception
+    {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Integer> l = new ArrayList<Integer>();
+        ArrayList<Integer> l1 = new ArrayList<Integer>();
+        ArrayList<Integer> l2 = new ArrayList<Integer>();
+        ArrayList<Integer> l3 = new ArrayList<Integer>();
+        int a;
+        for(int i = 0; i<20; i++){
+            a = Integer.parseInt(in.readLine());
+            if((a % 3 ==0) && (a%2==0)) {
+                l1.add(a);
+                l2.add(a);
+            }
+            else if (a%3==0) l1.add(a);
+            else if(a%2 ==0) l2.add(a);
+            else l3.add(a);
+        }
+        printList(l1);
+        printList(l2);
+        printList(l3);
+    }
+
+    public static void printList(List<Integer> list)
+    {
+        for(int i = 0; i<list.size(); i++) System.out.println(list.get(i));
+        
+    }
+}
