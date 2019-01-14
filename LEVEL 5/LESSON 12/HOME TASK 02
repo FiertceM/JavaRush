@@ -1,0 +1,78 @@
+package com.javarush.test.level05.lesson12.home02;
+
+/* A Man and A Woman
+1. Create public static classes Man and Woman within the class Solution.
+    2. Classes must have fields: name(String), age(int), address(String).
+    3. Create constructors to pass all the possible parameters to.
+    4. Use the constructor to create two objects of each class with all the data.
+    5. Display the objects in format [name + " " + age + " " + address].
+*/
+
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        Man chak = new Man("Chak", 25, "Mariupol");
+        Man roy = new Man("Roy", 18, "Odessa");
+        Woman silly = new Woman("Silly", 34, "New York");
+        Woman vika = new Woman("Vika", 19, "Moscow");
+
+        System.out.println(chak);
+        System.out.println(roy);
+        System.out.println(silly);
+        System.out.println(vika);
+    }
+
+    public static class Man
+    {
+        String name;
+        int age;
+        String address;
+
+        Man(String name)
+        {
+            this.name = name;
+        }
+
+        Man(String name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+
+        Man(String name, int age, String address)
+        {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+        }
+    }
+
+    public static class Woman
+    {
+        String name;
+        int age;
+        String address;
+
+        Woman(String name)
+        {
+            this.name = name;
+        }
+
+        Woman(String name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        Woman(String name, int age, String address)
+        {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+        }
+    }
+
+
+}
