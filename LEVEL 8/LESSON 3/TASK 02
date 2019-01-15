@@ -1,0 +1,33 @@
+package com.javarush.test.level08.lesson03.task02;
+
+/* HashMap of 10 pairs
+Create a collection HashMap<String, String>, place 10 pairs of strings into the collection:
+    watermelon - berry, banana - grass, cherry - berry, pear - fruit, melon - vegetable, blackberry - berry, ginseng - root, strawberry - berry, iris - flower, potato - tuber.
+    Display to the screen the contents of the collection. Each entry should be on a new line.
+
+    Output example (only one string is shown):
+    potato - tuber
+*/
+import java.util.*;
+
+public class Solution
+{
+    public static void main(String[] args) throws Exception
+    {
+        HashMap<String, String> hm = new HashMap<String, String>();
+        hm.put("watermelon", "berry"); 
+        hm.put("banana", "grass"); 
+        hm.put("cherry", "berry"); 
+        hm.put("pear", "fruit");
+        hm.put("melon", "vegetable"); 
+        hm.put("blackberry", "berry"); 
+        hm.put("ginseng", "root");
+        hm.put("strawberry", "berry"); 
+        hm.put("potato", "tuber"); 
+        hm.put("iris", "flower");
+        
+        for(Map.Entry<String, String> en: hm.entrySet())
+            System.out.println(en.getKey() + " - " +en.getValue());
+
+    }
+}
